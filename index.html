@@ -6,60 +6,55 @@
 <title>Xiang (Shawn) Zhang</title>
 <meta name="description" content="Xiang (Shawn) Zhang — M.S. Data Science, University of Michigan. RL post-training of LLMs, efficient & latent reasoning, reliable agents.">
 <style>
-  :root{
-    --ink:#1c2530; --muted:#5b6675; --line:#e6e9ee; --bg:#ffffff; --soft:#f6f8fa;
-    --accent:#13395e; --accent2:#1f6feb;
-  }
+  :root{--ink:#1c2530;--muted:#5b6675;--line:#e6e9ee;--bg:#fff;--soft:#f6f8fa;--accent:#13395e;--accent2:#1f6feb}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+    line-height:1.62;font-size:16px;-webkit-font-smoothing:antialiased}
   a{color:var(--accent2);text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
-  /* header */
-  header{padding:54px 0 30px;text-align:center;border-bottom:1px solid var(--line)}
-  h1{font-family:Georgia,"Times New Roman",serif;font-size:2.5rem;margin:0 0 6px;letter-spacing:.3px}
-  .tagline{color:var(--muted);font-size:1.06rem;margin:0 auto 18px;max-width:640px}
-  .tagline b{color:var(--ink);font-weight:600}
-  .links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:14px}
-  .links a{display:inline-block;padding:7px 14px;border:1px solid var(--line);border-radius:999px;
-    color:var(--ink);font-size:.92rem;background:var(--soft);transition:.15s}
+  .wrap{max-width:780px;margin:0 auto;padding:0 22px}
+
+  /* hero */
+  header{display:flex;gap:30px;align-items:center;padding:56px 0 34px;border-bottom:1px solid var(--line)}
+  .avatar{flex:0 0 142px;width:142px;height:142px;border-radius:50%;overflow:hidden;position:relative;
+    background:linear-gradient(135deg,#1f6feb,#13395e);box-shadow:0 4px 18px rgba(19,57,94,.18)}
+  .avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .avatar .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:Georgia,serif;font-size:3rem;letter-spacing:1px}
+  .intro h1{font-family:Georgia,"Times New Roman",serif;font-size:2.3rem;margin:0 0 4px}
+  .intro .role{color:var(--muted);font-size:1.02rem;margin:0 0 12px}
+  .intro p{margin:0 0 14px;font-size:1.02rem}
+  .links{display:flex;flex-wrap:wrap;gap:9px}
+  .links a{display:inline-block;padding:6px 13px;border:1px solid var(--line);border-radius:999px;
+    color:var(--ink);font-size:.9rem;background:var(--soft);transition:.15s}
   .links a:hover{border-color:var(--accent2);color:var(--accent2);text-decoration:none}
-  /* sections */
-  section{padding:30px 0;border-bottom:1px solid var(--line)}
-  h2{font-size:1.0rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);
-    margin:0 0 18px;font-weight:700}
-  .entry{margin-bottom:22px}
-  .entry:last-child{margin-bottom:0}
-  .entry .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-  .entry .role{font-weight:650;font-size:1.05rem}
-  .entry .place{color:var(--muted)}
-  .entry .date{color:var(--muted);font-size:.9rem;white-space:nowrap}
-  .entry ul{margin:8px 0 0;padding-left:20px}
-  .entry li{margin:5px 0}
-  .metric{color:var(--accent);font-weight:600}
-  /* project cards */
+
+  section{padding:28px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:.95rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--accent);margin:0 0 14px;font-weight:700}
+  .lead{margin:0}
+  .tools{margin:12px 0 0;color:var(--muted);font-size:.92rem}
+
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--soft);
-    display:flex;flex-direction:column}
-  .card h3{margin:0 0 6px;font-size:1.02rem}
-  .card p{margin:0 0 12px;color:var(--muted);font-size:.93rem;flex:1}
-  .card .cl{display:flex;gap:14px;font-size:.9rem;font-weight:600}
-  .tag{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.6px;
-    color:var(--accent);background:#eaf0f7;border-radius:6px;padding:2px 8px;margin-bottom:8px;align-self:flex-start}
-  /* lists */
+  .card{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--soft);display:flex;flex-direction:column}
+  .card .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);background:#eaf0f7;border-radius:6px;padding:2px 8px;margin-bottom:8px;align-self:flex-start}
+  .card h3{margin:0 0 6px;font-size:1.0rem}
+  .card p{margin:0 0 12px;color:var(--muted);font-size:.91rem;flex:1}
+  .card .cl{display:flex;gap:14px;font-size:.88rem;font-weight:600}
+  .metric{color:var(--accent);font-weight:600}
+
   .pub{margin:0;padding-left:20px}
-  .pub li{margin:9px 0}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
-  .chip{font-size:.86rem;background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:4px 10px;color:var(--ink)}
-  .honors{margin:0;padding-left:20px;color:var(--muted);font-size:.95rem}
-  .honors li{margin:4px 0}
-  footer{padding:28px 0 50px;text-align:center;color:var(--muted);font-size:.86rem}
-  @media (max-width:640px){
-    h1{font-size:2rem} .cards{grid-template-columns:1fr}
-    .entry .row{flex-direction:column;gap:0}
+  .pub li{margin:8px 0;font-size:.97rem}
+  .edu{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:6px 0}
+  .edu .d{color:var(--muted);font-size:.9rem;white-space:nowrap}
+  .edu .s{color:var(--muted);font-size:.92rem;width:100%}
+  footer{padding:26px 0 48px;text-align:center;color:var(--muted);font-size:.85rem}
+
+  @media(max-width:620px){
+    header{flex-direction:column;text-align:center;gap:18px;padding-top:42px}
+    .links{justify-content:center}.intro h1{font-size:2rem}.cards{grid-template-columns:1fr}
+    .avatar{width:120px;height:120px;flex-basis:120px}
   }
 </style>
 </head>
@@ -67,128 +62,76 @@
 <div class="wrap">
 
   <header>
-    <h1>Xiang (Shawn) Zhang</h1>
-    <p class="tagline">
-      M.S. in Data Science, <b>University of Michigan</b>. I work on
-      <b>reinforcement learning for LLM post-training</b>, <b>efficient &amp; latent reasoning</b>,
-      and <b>reliable, faithful agents</b> — currently with <a href="https://jieliu6.github.io/">Prof. Jie Liu</a>.
-    </p>
-    <div class="links">
-      <a href="mailto:xiangzhg@umich.edu">✉ xiangzhg@umich.edu</a>
-      <a href="https://github.com/shawnzhg">GitHub</a>
-      <a href="Xiang_Zhang_CV.pdf">CV (PDF)</a>
-      <a href="https://jieliu6.github.io/">Liu Lab</a>
+    <div class="avatar">
+      <span class="ph">XZ</span>
+      <img src="profile.jpg" alt="Xiang (Shawn) Zhang" onerror="this.remove()">
+    </div>
+    <div class="intro">
+      <h1>Xiang (Shawn) Zhang</h1>
+      <p class="role">M.S. in Data Science, University of Michigan · <a href="https://jieliu6.github.io/">Liu Lab</a></p>
+      <p>I work on <b>reinforcement learning for LLM post-training</b>, <b>efficient &amp; latent reasoning</b>,
+         and <b>reliable agents</b>. I like turning a sharp diagnosis of <em>why</em> a method fails into a
+         principled, reproducible fix. <b>Actively seeking PhD &amp; summer-research opportunities.</b></p>
+      <div class="links">
+        <a href="mailto:xiangzhg@umich.edu">✉ Email</a>
+        <a href="Xiang_Zhang_CV.pdf">CV (PDF)</a>
+        <a href="https://github.com/shawnzhg">GitHub</a>
+        <a href="https://jieliu6.github.io/">Liu Lab</a>
+      </div>
     </div>
   </header>
 
-  <section id="interests">
-    <h2>Research Interests</h2>
-    <p>RL post-training &amp; reward design · multimodal reasoning &amp; agents · reliable / faithful generation ·
-    efficient &amp; latent reasoning · machine learning. I like turning a sharp diagnosis of <em>why</em> a method
-    fails into a principled fix, and I keep my claims honest and reproducible.</p>
+  <section id="research">
+    <h2>Research</h2>
+    <p class="lead">RL post-training &amp; reward design · efficient &amp; latent reasoning · multimodal reasoning &amp; agents ·
+       reliable / faithful generation. My recent work diagnoses failure modes of RL-trained reasoning LLMs and designs fixes,
+       and builds training-free agents that don't fabricate.</p>
+    <p class="tools">Hands-on with veRL · TRL · OpenRLHF · vLLM · SGLang · DeepSpeed/FSDP · PyTorch.</p>
   </section>
 
-  <section id="experience">
-    <h2>Research Experience</h2>
-
-    <div class="entry">
-      <div class="row">
-        <span><span class="role">LLM Post-training &amp; Latent Reasoning</span> · <span class="place">University of Michigan, <a href="https://jieliu6.github.io/">Liu Lab</a> (Jie Liu)</span></span>
-        <span class="date">01/2026 – 05/2026</span>
-      </div>
-      <ul>
-        <li><b>Literature-writing agent</b> — multi-turn, rubric-grounded, multi-dimensional rewards spread across a full trajectory, for an RL post-training task with no binary reward signal.</li>
-        <li><b>Biomedical deep-research agent</b> — training-free, multi-module agent (compress-before-reason + verbatim-grounded answers behind a mechanical faithfulness gate); fact-level completeness <span class="metric">0.442→0.645</span>, entity coverage <span class="metric">0.676→0.823</span>, <span class="metric">55%</span> lower cost, <b>zero fabricated citations</b>. <a href="https://github.com/shawnzhg/pubmed-deep-research-agent">code ↗</a> <span style="color:var(--muted)">(deploying at <a href="https://glkb.org">glkb.org</a>)</span></li>
-        <li><b>KV-cache compression &amp; reuse</b> — compressed reusable “Skills” into a small set of KV-cache states trained as RL-optimizable parameters; SearchQA accuracy <span class="metric">77.7→88.3</span>.</li>
-        <li><b>Latent-space reasoning</b> — designed <b>MCIG</b> (a training-free per-token redundancy signal) + a latent-feedback adapter; isolated four mechanistic roadblocks showing why pure latent skipping regresses at 1.5B — a documented negative result motivating selective latent↔explicit switching. <a href="https://github.com/shawnzhg/adaptive-latent-reasoning">code &amp; report ↗</a></li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="row">
-        <span><span class="role">Efficient Reasoning &amp; the Underthinking of RL-trained LLMs</span> · <span class="place">Institute of Automation, CAS (CASIA)</span></span>
-        <span class="date">06/2025 – 04/2026</span>
-      </div>
-      <ul>
-        <li><b>Depth-Quality Erosion (diagnosis)</b> — analyzed GRPO/RLVR post-training at per-reasoning-depth granularity and derived a closed-form variance-update identity, uncovering a Simpson's-paradox mode-seeking collapse: pass rate drops in <em>every</em> depth bin (up to <span class="metric">−26%</span>) even as aggregate Pass@1 <em>rises</em> (<span class="metric">+2.0 pp</span>).</li>
-        <li><b>STAGE-GRPO</b> — a stratified-advantage variant with online per-prompt difficulty estimation that provably decouples variance dynamics from geometric alignment; eliminates the per-bin degradation and lifts MATH-500 Pass@1 to <span class="metric">0.868</span> (+4.2 pp vs. base, +2.2 pp vs. GRPO).</li>
-        <li><b>Prefix-contrastive credit assignment</b> — concentrates the gradient on decision-critical tokens by contrasting, within a group, the branch positions where same-prefix correct and incorrect rollouts diverge (correctness verified by 19 invariant unit tests; end-to-end ablations in progress). <a href="https://github.com/shawnzhg/grpo-underthinking">code &amp; report ↗</a></li>
-      </ul>
-    </div>
-
-    <div class="entry">
-      <div class="row">
-        <span><span class="role">Spatiotemporal Drought Forecasting (Transformer &amp; GraphRAG)</span> · <span class="place">Chinese Academy of Agricultural Sciences (CAAS)</span></span>
-        <span class="date">02/2025 – 06/2025</span>
-      </div>
-      <ul>
-        <li>Designed <b>Cross-Spatiotemporal-Former (CSTF)</b>, a cross-attention architecture fusing spatial-grid and temporal features — <span class="metric">98.6%</span> drought-classification accuracy on 12 years of ERA5-Land data, outperforming LSTM baselines on long-range SPI/SPEI dependencies; built a Drought–Water–Wheat GraphRAG system (DistilBERT + FAISS + Baichuan2-13B) for evidence-based answers.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Selected Projects</h2>
+  <section id="work">
+    <h2>Selected Work</h2>
     <div class="cards">
       <div class="card">
         <span class="tag">RL · post-training</span>
-        <h3>grpo-underthinking</h3>
-        <p>Diagnosing &amp; repairing the Depth-Quality Erosion of GRPO reasoning — STAGE-GRPO and a family of advantage/reward variants. MATH-500 Pass@1 0.826 → 0.868.</p>
+        <h3>STAGE-GRPO &amp; the Depth-Quality Erosion</h3>
+        <p>Diagnosed a Simpson's-paradox collapse in GRPO (pass rate drops in every reasoning-depth bin while aggregate Pass@1 rises) and fixed it — MATH-500 Pass@1 <span class="metric">0.826 → 0.868</span>.</p>
         <div class="cl"><a href="https://github.com/shawnzhg/grpo-underthinking">Code</a><a href="https://github.com/shawnzhg/grpo-underthinking/blob/main/REPORT.md">Report</a></div>
-      </div>
-      <div class="card">
-        <span class="tag">latent reasoning · KV-cache</span>
-        <h3>adaptive-latent-reasoning</h3>
-        <p>Hidden-state-guided CoT compression: the MCIG redundancy signal, a latent <code>&lt;SKIP&gt;</code> adapter, and four mechanistic roadblocks — an honest study of why latent skipping breaks at 1.5B.</p>
-        <div class="cl"><a href="https://github.com/shawnzhg/adaptive-latent-reasoning">Code</a><a href="https://github.com/shawnzhg/adaptive-latent-reasoning/blob/main/REPORT.md">Report</a></div>
       </div>
       <div class="card">
         <span class="tag">agent · faithfulness</span>
         <h3>Biomedical deep-research agent</h3>
-        <p>Training-free, multi-module literature-review agent with a mechanical faithfulness gate — higher completeness &amp; entity coverage at 55% lower cost, with zero fabricated citations.</p>
+        <p>Training-free, multi-module literature agent behind a mechanical faithfulness gate — higher completeness &amp; coverage at <span class="metric">55% lower cost</span>, with <span class="metric">zero fabricated citations</span>.</p>
         <div class="cl"><a href="https://github.com/shawnzhg/pubmed-deep-research-agent">Code</a><a href="https://glkb.org">glkb.org</a></div>
+      </div>
+      <div class="card">
+        <span class="tag">latent reasoning · KV-cache</span>
+        <h3>Latent-space reasoning (MCIG)</h3>
+        <p>A hidden-state redundancy signal + latent <code>&lt;SKIP&gt;</code> adapter for KV-cache reduction; an honest study of the four roadblocks that make latent skipping break at 1.5B.</p>
+        <div class="cl"><a href="https://github.com/shawnzhg/adaptive-latent-reasoning">Code</a><a href="https://github.com/shawnzhg/adaptive-latent-reasoning/blob/main/REPORT.md">Report</a></div>
+      </div>
+      <div class="card">
+        <span class="tag">reasoning · RL infra</span>
+        <h3>KV-cache "Skills" reuse</h3>
+        <p>Compressed reusable reasoning "Skills" into a small set of KV-cache states trained as RL-optimizable parameters — SearchQA accuracy <span class="metric">77.7 → 88.3</span>.</p>
+        <div class="cl"><a href="https://glkb.org">glkb.org</a></div>
       </div>
     </div>
   </section>
 
-  <section id="publications">
+  <section id="pubs">
     <h2>Publications</h2>
     <ol class="pub">
       <li><b>X. Zhang</b>, H. Zhaowei (co-first author), L. Jie. <em>GLKB literature-writing agent.</em> In preparation, 2026.</li>
-      <li>E. Liu, <b>X. Zhang</b>, P. Pan, Y. Wang, B. Liu, L. Zhang, X. Mei. <em>Agricultural technology gap affects climate-change adaptation and mitigation, from patent data.</em> Under review, <em>npj Climate and Atmospheric Science</em>, 2024.</li>
-      <li>L. Zhang, <b>X. Zhang</b>, J. Gao, S. Lei, C. Yan, E. Liu. <em>The technological landscape and competition of the biodegradable PBAT industry via multidimensional patent analysis.</em> Under review, <em>IEEE Transactions on Engineering Management</em>, 2024.</li>
+      <li>E. Liu, <b>X. Zhang</b>, et al. <em>Agricultural technology gap affects climate-change adaptation and mitigation, from patent data.</em> Under review, <em>npj Climate and Atmospheric Science</em>, 2024.</li>
+      <li>L. Zhang, <b>X. Zhang</b>, et al. <em>Technological landscape of the biodegradable PBAT industry via multidimensional patent analysis.</em> Under review, <em>IEEE Trans. Engineering Management</em>, 2024.</li>
     </ol>
   </section>
 
-  <section id="education">
+  <section id="edu">
     <h2>Education</h2>
-    <div class="entry">
-      <div class="row"><span class="role">University of Michigan, Ann Arbor</span><span class="date">08/2025 – 06/2027</span></div>
-      <div class="place">M.S. in Data Science · GPA 3.9</div>
-    </div>
-    <div class="entry">
-      <div class="row"><span class="role">Capital University of Economics and Business</span><span class="date">09/2021 – 07/2025</span></div>
-      <div class="place">B.S. in Data Science · GPA 4.0 (Beijing, China)</div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="chips">
-      <span class="chip">PyTorch</span><span class="chip">veRL / TRL / OpenRLHF</span><span class="chip">vLLM</span><span class="chip">SGLang</span>
-      <span class="chip">DeepSpeed / FSDP / DDP</span><span class="chip">Python</span><span class="chip">SQL · R · Java</span>
-      <span class="chip">Linux / shell</span><span class="chip">prompt engineering &amp; local LLM deployment</span>
-    </div>
-  </section>
-
-  <section id="honors">
-    <h2>Honors</h2>
-    <ul class="honors">
-      <li>First-Class Merit Scholarship (Top 5%), 2023–2024</li>
-      <li>First Prize, National College Student Market Research &amp; Analysis Competition, 2024</li>
-      <li>Project Leader, Beijing University Student Innovation &amp; Entrepreneurship Program, 2024</li>
-      <li>Third Prize, National College Student Statistical Modeling Competition, 2023</li>
-    </ul>
+    <div class="edu"><b>University of Michigan, Ann Arbor</b> — M.S. Data Science<span class="d">2025 – 2027</span><span class="s">GPA 3.9</span></div>
+    <div class="edu"><b>Capital University of Economics and Business</b> — B.S. Data Science<span class="d">2021 – 2025</span><span class="s">GPA 4.0 · Beijing, China</span></div>
   </section>
 
   <footer>
