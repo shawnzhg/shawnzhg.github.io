@@ -98,7 +98,7 @@
       </div>
       <ul>
         <li><b>Literature-writing agent</b> — multi-turn, rubric-grounded, multi-dimensional rewards spread across a full trajectory, for an RL post-training task with no binary reward signal.</li>
-        <li><b>Biomedical deep-research agent</b> — training-free, multi-module agent (compress-before-reason + verbatim-grounded answers behind a mechanical faithfulness gate); fact-level completeness <span class="metric">0.442→0.645</span>, entity coverage <span class="metric">0.676→0.823</span>, <span class="metric">55%</span> lower cost, <b>zero fabricated citations</b>. <span style="color:var(--muted)">(deploying at <a href="https://glkb.org">glkb.org</a>)</span></li>
+        <li><b>Biomedical deep-research agent</b> — training-free, multi-module agent (compress-before-reason + verbatim-grounded answers behind a mechanical faithfulness gate); fact-level completeness <span class="metric">0.442→0.645</span>, entity coverage <span class="metric">0.676→0.823</span>, <span class="metric">55%</span> lower cost, <b>zero fabricated citations</b>. <a href="https://github.com/shawnzhg/pubmed-deep-research-agent">code ↗</a> <span style="color:var(--muted)">(deploying at <a href="https://glkb.org">glkb.org</a>)</span></li>
         <li><b>KV-cache compression &amp; reuse</b> — compressed reusable “Skills” into a small set of KV-cache states trained as RL-optimizable parameters; SearchQA accuracy <span class="metric">77.7→88.3</span>.</li>
         <li><b>Latent-space reasoning</b> — designed <b>MCIG</b> (a training-free per-token redundancy signal) + a latent-feedback adapter; isolated four mechanistic roadblocks showing why pure latent skipping regresses at 1.5B — a documented negative result motivating selective latent↔explicit switching. <a href="https://github.com/shawnzhg/adaptive-latent-reasoning">code &amp; report ↗</a></li>
       </ul>
@@ -146,7 +146,7 @@
         <span class="tag">agent · faithfulness</span>
         <h3>Biomedical deep-research agent</h3>
         <p>Training-free, multi-module literature-review agent with a mechanical faithfulness gate — higher completeness &amp; entity coverage at 55% lower cost, with zero fabricated citations.</p>
-        <div class="cl"><a href="https://glkb.org">glkb.org</a><span style="color:var(--muted);font-weight:500">code private</span></div>
+        <div class="cl"><a href="https://github.com/shawnzhg/pubmed-deep-research-agent">Code</a><a href="https://glkb.org">glkb.org</a></div>
       </div>
     </div>
   </section>
