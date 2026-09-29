@@ -4,128 +4,157 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xiang (Shawn) Zhang</title>
-<meta name="description" content="Xiang (Shawn) Zhang — M.S. student at the University of Michigan working on LLM post-training: external task knowledge (KV-Skill), credit assignment in RLVR, and latent-space reasoning.">
+<meta name="description" content="Xiang (Shawn) Zhang — M.S. student at the University of Michigan working on representation learning, post-training, and agents for large language models. Applying to PhD programs for Fall 2027.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 <style>
-  body{
-    margin:0;background:#fdfdfd;color:#1a1a1a;
-    font-family:Charter,"Bitstream Charter",Georgia,Cambria,serif;
-    font-size:16.5px;line-height:1.55;
-  }
-  .page{max-width:740px;margin:0 auto;padding:44px 20px 60px}
-  a{color:#20509e;text-decoration:none}
+  :root{--ink:#1d1d1f;--muted:#5f6368;--faint:#8a8f98;--rule:#e6e6e6;--accent:#00274c;--link:#1a5fb4;--maize:#ffcb05}
+  body{margin:0;background:#fff;color:var(--ink);font-family:"Source Sans 3",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6}
+  .page{max-width:860px;margin:0 auto;padding:56px 24px 64px}
+  a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
-  h1{font-size:1.9rem;font-weight:700;margin:0 0 2px;letter-spacing:.2px}
-  h2{font-size:1.15rem;font-weight:700;margin:34px 0 10px;border-bottom:1px solid #ddd;padding-bottom:4px}
-  .subtitle{color:#555;margin:0 0 14px}
-  .top{overflow:auto}
-  .top img{float:right;width:150px;height:150px;object-fit:cover;border-radius:4px;margin:4px 0 12px 24px}
-  .contact{margin:10px 0 0;font-size:.95rem;color:#555}
-  .contact a{margin-right:14px}
-  p{margin:0 0 13px}
+  p{margin:0 0 12px}
+
+  header{display:grid;grid-template-columns:170px 1fr;gap:32px;align-items:start;margin-bottom:8px}
+  header img{width:170px;height:170px;object-fit:cover;border-radius:6px}
+  h1{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:2.1rem;margin:0;letter-spacing:-.2px}
+  .role{color:var(--muted);margin:2px 0 12px;font-size:1.02rem}
+  .links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.97rem;margin-top:10px}
+  .links a{display:inline-flex;align-items:center;gap:6px;color:var(--ink)}
+  .links a:hover{color:var(--link);text-decoration:none}
+  .links svg{width:16px;height:16px;fill:currentColor;opacity:.75}
+
+  h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.3rem;margin:44px 0 16px;color:var(--accent)}
+  .applying{margin:18px 0 0;padding:10px 14px;border-left:3px solid var(--maize);background:#fafaf7;font-size:.98rem}
 
   .news{list-style:none;padding:0;margin:0}
-  .news li{margin:0 0 7px;padding-left:98px;position:relative}
-  .news .d{position:absolute;left:0;color:#777;font-size:.92rem}
+  .news li{display:grid;grid-template-columns:84px 1fr;gap:12px;margin:0 0 6px}
+  .news .d{color:var(--faint);font-variant-numeric:tabular-nums;font-size:.95rem;padding-top:1px}
 
-  .pub{margin:0 0 18px}
-  .pub .t{font-weight:700}
-  .pub .a{display:block}
-  .pub .v{display:block;color:#555;font-style:italic}
-  .pub .l{font-size:.95rem}
-  .pub .l a{margin-right:10px}
-  .pub .note{display:block;color:#444;font-size:.95rem}
-  .me{text-decoration:underline;text-decoration-color:#bbb;text-underline-offset:3px}
+  .pub{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:18px 0;border-top:1px solid var(--rule)}
+  .pub.notb{padding:12px 0}
+  .pub:first-of-type{border-top:0;padding-top:4px}
+  .thumb{width:200px;height:120px;border:1px solid var(--rule);border-radius:4px;background:#fff center/contain no-repeat;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:contain}
+  .thumb.ph{display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:.85rem;background:#f6f7f8}
+  .pub .t{font-weight:700;line-height:1.35;display:block;margin-bottom:3px}
+  .pub .a{display:block;color:#333;font-size:.97rem}
+  .pub .v{display:block;margin-top:3px;font-size:.95rem}
+  .venue{font-weight:600;color:var(--accent)}
+  .status{color:var(--muted);font-style:italic}
+  .pub .note{display:block;color:var(--muted);font-size:.94rem;margin-top:6px}
+  .me{font-weight:700}
+  .eq{color:var(--faint);font-size:.88rem;white-space:nowrap}
+  .l{display:inline-block;margin-top:6px;font-size:.93rem}
+  .l a{margin-right:4px}
+  .l a::before{content:"["}
+  .l a::after{content:"]"}
+  .l a::before,.l a::after{color:var(--faint)}
 
-  .rp{margin:0 0 15px}
-  .rp b.n{font-weight:700}
+  .rp{margin:0 0 16px}
+  .rp b{font-weight:700}
 
-  .exp{margin:0 0 9px;overflow:auto}
-  .exp .when{float:right;color:#777;font-size:.93rem;white-space:nowrap;margin-left:12px}
-  .exp .sub{color:#555;font-size:.95rem}
+  .exp{display:grid;grid-template-columns:1fr auto;gap:2px 16px;margin:0 0 12px}
+  .exp .when{color:var(--faint);font-variant-numeric:tabular-nums;font-size:.95rem}
+  .exp .sub{grid-column:1/-1;color:var(--muted);font-size:.95rem}
 
-  .small{color:#777;font-size:.9rem}
-  footer{margin-top:44px;color:#999;font-size:.85rem}
-  @media(max-width:560px){
-    .top img{float:none;display:block;margin:0 0 16px}
-    .news li{padding-left:0}
-    .news .d{position:static;display:block}
-    .exp .when{float:none;display:block;margin:0}
+  footer{margin-top:52px;padding-top:14px;border-top:1px solid var(--rule);color:var(--faint);font-size:.85rem}
+
+  @media(max-width:640px){
+    header{grid-template-columns:1fr;gap:16px}
+    header img{width:130px;height:130px}
+    .pub{grid-template-columns:1fr;gap:12px}
+    .thumb{width:100%;height:160px}
+    .pub.notb>div:first-child{display:none}
+    .news li{grid-template-columns:1fr;gap:0}
   }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <div class="top">
-    <img src="profile.jpg" alt="Xiang Zhang" onerror="this.remove()">
-    <h1>Xiang (Shawn) Zhang</h1>
-    <p class="subtitle">M.S. student, University of Michigan</p>
-    <p>I'm an M.S. student in Data Science at the University of Michigan, where I work with Prof. <a href="https://jieliu6.github.io/">Jie Liu</a> on representation learning, post-training, and agents for large language models. Before Michigan, I was a research assistant at the Institute of Automation, Chinese Academy of Sciences (CASIA).</p>
-    <p>I'm broadly interested in machine learning for language models — how they learn, reason, and act, and how we can tell when they have actually improved. Recently this has meant packaging task expertise as something a frozen model can load on demand (<a href="https://arxiv.org/abs/2608.05475">KV-Skill</a>), rethinking how agents are evaluated and trained so that leaderboard gains reflect real capability (<a href="https://arxiv.org/abs/2609.32318">What Can a Leaderboard Certify?</a>), and studying credit assignment in RL for reasoning models. I'm also interested in applying these methods to scientific problems, where reliability matters more than benchmark scores.</p>
-    <p>I am applying to PhD programs for Fall 2027.</p>
-    <p class="contact">
-      <a href="mailto:xiangzhg@umich.edu">xiangzhg@umich.edu</a>
-      <a href="Xiang_Zhang_CV.pdf">CV</a>
-      <a href="https://github.com/shawnzhg">GitHub</a>
-    </p>
-  </div>
+  <header>
+    <img src="profile.jpg" alt="Xiang Zhang">
+    <div>
+      <h1>Xiang (Shawn) Zhang</h1>
+      <div class="role">M.S. in Data Science · University of Michigan</div>
+      <p>I work with Prof. <a href="https://jieliu6.github.io/">Jie Liu</a> on representation learning, post-training, and agents for large language models. I also handle most of the technical development of <a href="https://glkb.org">GLKB</a>, the lab's platform for the biomedical literature. Before Michigan, I was a research assistant at the Institute of Automation, Chinese Academy of Sciences (CASIA).</p>
+      <div class="links">
+        <a href="mailto:xiangzhg@umich.edu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7zm16 2.8-8 5-8-5V17h16z"/></svg>xiangzhg@umich.edu</a>
+        <a href="Xiang_Zhang_CV.pdf"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h8v1.5H8zm0 3h8v1.5H8zm0 3h5v1.5H8z"/></svg>CV</a>
+        <a href="https://github.com/shawnzhg"><svg viewBox="0 0 24 24"><path d="M12 1.5a10.5 10.5 0 0 0-3.3 20.5c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.2 3.1.9.1-.7.4-1.2.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 1.9v2.9c0 .3.2.6.7.5A10.5 10.5 0 0 0 12 1.5z"/></svg>GitHub</a>
+        <a href="https://scholar.google.com/citations?user=gSRDGEwAAAAJ&amp;hl=en"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9zM5 13.2v4L12 21l7-3.8v-4L12 17z"/></svg>Google Scholar</a>
+      </div>
+    </div>
+  </header>
+
+  <p style="margin-top:22px">I'm broadly interested in machine learning for language models — how they learn, reason, and act, and how we can tell when they have actually improved. Recently this has meant packaging task expertise as something a frozen model can load on demand (<a href="https://arxiv.org/abs/2608.05475">KV-Skill</a>), rethinking how agents are evaluated and trained so that leaderboard gains reflect real capability (<a href="https://arxiv.org/abs/2609.32318">What Can a Leaderboard Certify?</a>), and studying credit assignment in RL for reasoning models. I'm also interested in applying these methods to scientific problems, where reliability matters more than benchmark scores.</p>
+  <div class="applying">I am applying to PhD programs for Fall 2027.</div>
 
   <h2>News</h2>
   <ul class="news">
-    <li><span class="d">Sep 2026</span>New preprint: <a href="https://arxiv.org/abs/2609.32318"><i>What Can a Leaderboard Certify?</i></a> (co-first author), on compositional controllability for evaluating and training biomedical literature-review agents.</li>
-    <li><span class="d">Aug 2026</span>New preprint: <a href="https://arxiv.org/abs/2608.05475">KV-Skill</a> (co-first author), under review at ACL Rolling Review.</li>
-    <li><span class="d">Jan 2026</span>Started working with Prof. Jie Liu's lab at Michigan on LLM post-training.</li>
-    <li><span class="d">Aug 2025</span>Began my M.S. at the University of Michigan.</li>
+    <li><span class="d">Sep 2026</span><span>New preprint: <a href="https://arxiv.org/abs/2609.32318"><i>What Can a Leaderboard Certify?</i></a> (co-first author), on compositional controllability for evaluating and training biomedical literature-review agents.</span></li>
+    <li><span class="d">Aug 2026</span><span>New preprint: <a href="https://arxiv.org/abs/2608.05475">KV-Skill</a> (co-first author), under review at ACL Rolling Review.</span></li>
+    <li><span class="d">Jan 2026</span><span>Started working with Prof. Jie Liu's lab at Michigan on LLM post-training.</span></li>
+    <li><span class="d">Aug 2025</span><span>Began my M.S. at the University of Michigan.</span></li>
   </ul>
 
   <h2>Publications &amp; Preprints</h2>
 
   <div class="pub">
-    <span class="t">KV-Skill: Forging Expertise in the Model's Native Language</span>
-    <span class="a">Zhaowei Han*, <span class="me">Xiang Zhang</span>*, Bing Han, Kai Liu, Danqi Hu, Jie Liu &nbsp;<span class="small">(*equal contribution)</span></span>
-    <span class="v">arXiv:2608.05475 · under review at ACL Rolling Review</span>
-    <span class="note">Task knowledge as an external factorized operator a frozen LLM loads on demand — from authored text or straight from reward. Converting a text skill lifts LiveMath (Qwen3.5-4B) 23.4&#8202;→&#8202;77.2; beats LoRA, prefix tuning, and soft prefixes in 7 of 8 matched-budget settings; three skills share one interface without forgetting.</span>
-    <span class="l"><a href="https://arxiv.org/abs/2608.05475">arXiv</a><a href="https://github.com/shawnzhg/KV-Skill">code</a></span>
+    <div class="thumb"><img src="img/kvskill.png" alt=""></div>
+    <div>
+      <span class="t">KV-Skill: Forging Expertise in the Model's Native Language</span>
+      <span class="a">Zhaowei Han*, <span class="me">Xiang Zhang</span>*, Bing Han, Kai Liu, Danqi Hu, Jie Liu &nbsp;<span class="eq">(*equal contribution)</span></span>
+      <span class="v"><span class="venue">ACL Rolling Review</span> <span class="status">· under review</span></span>
+      <span class="note">Task knowledge as an external factorized operator a frozen LLM loads on demand. Converting a text skill lifts LiveMath 23.4&#8202;→&#8202;77.2; beats LoRA, prefix tuning, and soft prefixes in 7 of 8 matched-budget settings.</span>
+      <span class="l"><a href="https://arxiv.org/abs/2608.05475">arXiv</a> <a href="https://github.com/shawnzhg/KV-Skill">code</a></span>
+    </div>
   </div>
 
   <div class="pub">
-    <span class="t">What Can a Leaderboard Certify? Compositional Controllability for Fair Evaluation and Training of Biomedical Literature-Review Agents</span>
-    <span class="a">Zhaowei Han*, <span class="me">Xiang Zhang</span>*, Lingxiao Guan*, Danqi Hu, Kai Liu, Kevin Chang, Jie Liu &nbsp;<span class="small">(*equal contribution)</span></span>
-    <span class="v">arXiv:2609.32318 · under review at ICLR 2027</span>
-    <span class="l"><a href="https://arxiv.org/abs/2609.32318">arXiv</a><a href="https://github.com/shawnzhg/LitReview-SCRIBE">code</a></span>
+    <div class="thumb"><img src="img/scribe.png" alt=""></div>
+    <div>
+      <span class="t">What Can a Leaderboard Certify? Compositional Controllability for Fair Evaluation and Training of Biomedical Literature-Review Agents</span>
+      <span class="a">Zhaowei Han*, <span class="me">Xiang Zhang</span>*, Lingxiao Guan*, Danqi Hu, Kai Liu, Kevin Chang, Jie Liu &nbsp;<span class="eq">(*equal contribution)</span></span>
+      <span class="v"><span class="venue">ICLR 2027</span> <span class="status">· under review</span></span>
+      <span class="note">A test, run before scores are seen, of whether two agents can be fairly compared at all. Of 21 pairwise comparisons among seven published pipelines, conventional statistics declares a winner in 14; our test refuses 11 for unmatched inputs, including every one involving the top-ranked system. Introduces BioLitBench (2,042 biomedical articles) and SCRIBE, a stage-trained agent certified at rank [1,&nbsp;2].</span>
+      <span class="l"><a href="https://arxiv.org/abs/2609.32318">arXiv</a> <a href="https://github.com/shawnzhg/LitReview-SCRIBE">code</a></span>
+    </div>
   </div>
 
   <div class="pub">
-    <span class="t">Agricultural technology gap affects climate change adaptation and mitigation based on patent data</span>
-    <span class="a">Enke Liu*, <span class="me">Xiang Zhang</span>*, Peng Pan*, Yuqing Wang, Buchun Liu, Liwei Zhang, Xiaorong Mei &nbsp;<span class="small">(*equal contribution)</span></span>
-    <span class="v">under review at npj Climate and Atmospheric Science</span>
+    <div class="thumb"><img src="img/agtech.png" alt=""></div>
+    <div>
+      <span class="t">Agricultural technology gap affects climate change adaptation and mitigation based on patent data</span>
+      <span class="a">Enke Liu*, <span class="me">Xiang Zhang</span>*, Peng Pan*, Yuqing Wang, Buchun Liu, Liwei Zhang, Xiaorong Mei &nbsp;<span class="eq">(*equal contribution)</span></span>
+      <span class="v"><span class="venue">npj Climate and Atmospheric Science</span> <span class="status">· under review</span></span>
+    </div>
   </div>
 
   <div class="pub">
-    <span class="t">An insight into the technological landscape and competitive situation of the biodegradable PBAT industry based on multidimensional patent analysis</span>
-    <span class="a">Liwei Zhang, <span class="me">Xiang Zhang</span>, Jing Gao, Shuxia Lei, Changrong Yan, Enke Liu</span>
-    <span class="v">under review at IEEE Transactions on Engineering Management</span>
+    <div class="thumb"><img src="img/pbat.png" alt=""></div>
+    <div>
+      <span class="t">An insight into the technological landscape and competitive situation of the biodegradable PBAT industry based on multidimensional patent analysis</span>
+      <span class="a">Liwei Zhang, <span class="me">Xiang Zhang</span>, Jing Gao, Shuxia Lei, Changrong Yan, Enke Liu</span>
+      <span class="v"><span class="venue">IEEE Transactions on Engineering Management</span> <span class="status">· under review</span></span>
+    </div>
   </div>
 
   <h2>Research</h2>
-
-  <p class="rp"><b class="n">External task knowledge (KV-Skill).</b> The paper above, but it started as a simpler engineering question: we kept re-sending the same long "how to do this task" prompt to a frozen model and paying for it every call. Compressing that knowledge into KV-cache states, then asking what those states really are, led to the operator view — and to the surprise that a text-derived operator survives truncation to a single task-aligned direction per injection layer.</p>
-
-  <p class="rp"><b class="n">Credit assignment in GRPO.</b> At CASIA I noticed that a model's aggregate Pass@1 can rise while its pass rate falls in <i>every</i> reasoning-depth bin — a Simpson's-paradox collapse hidden by the headline number. I derived a variance-update identity that explains the mode-seeking behavior, then built STAGE-GRPO, a stratified-advantage variant that removes the per-bin degradation (MATH-500 Pass@1 0.826&#8202;→&#8202;0.868). A per-token follow-up — contrasting branch positions where same-prefix correct and incorrect rollouts diverge — is in ablations now. <span class="l"><a href="https://github.com/shawnzhg/grpo-underthinking">code</a><a href="https://github.com/shawnzhg/grpo-underthinking/blob/main/REPORT.md">report</a></span></p>
-
-  <p class="rp"><b class="n">Latent-space reasoning, and why it breaks at 1.5B.</b> I built MCIG, a training-free per-token redundancy signal, and a latent &lt;SKIP&gt; adapter meant to fold redundant reasoning steps into hidden states. It doesn't work at this scale, and I wrote up exactly why: four separate mechanisms (a signal that discriminates offline but is useless as an RL reward, error accumulation, KV-cache poisoning, and a RoPE-manifold mismatch), each isolated by ablation. The write-up argues for selective latent↔explicit switching instead of pure latent skipping. <span class="l"><a href="https://github.com/shawnzhg/adaptive-latent-reasoning">code</a><a href="https://github.com/shawnzhg/adaptive-latent-reasoning/blob/main/REPORT.md">report</a></span></p>
-
-  <p class="rp"><b class="n">Faithful deep research over biomedical literature.</b> A training-free multi-module agent for <a href="https://glkb.org">GLKB</a> where every claim passes a mechanical faithfulness gate before it can be emitted. Higher fact-level completeness (0.442&#8202;→&#8202;0.645) and entity coverage at 55% lower cost, with zero fabricated citations — the constraint that actually matters in this domain. <span class="l"><a href="https://github.com/shawnzhg/pubmed-deep-research-agent">code</a></span></p>
+  <p class="rp"><b>External task knowledge (KV-Skill).</b> The paper above, but it started as a simpler engineering question: we kept re-sending the same long "how to do this task" prompt to a frozen model and paying for it every call. Compressing that knowledge into KV-cache states, then asking what those states really are, led to the operator view — and to the surprise that a text-derived operator survives truncation to a single task-aligned direction per injection layer.</p>
+  <p class="rp"><b>GLKB, a knowledge platform for the biomedical literature.</b> <a href="https://glkb.org">GLKB</a> is the Liu Lab's platform for searching and synthesizing biomedical research, and I now handle most of its technical development. Its review-writing agent, SCRIBE, is the system we train and evaluate in <i>What Can a Leaderboard Certify?</i>. Before SCRIBE, I built a training-free deep-research agent for GLKB in which every claim has to pass a mechanical faithfulness check before it can be written, which raised fact-level completeness from 0.442 to 0.645 at 55% lower cost with zero fabricated citations. <span class="l"><a href="https://glkb.org">site</a></span></p>
+  <p class="rp"><b>Credit assignment in GRPO.</b> At CASIA I noticed that a model's aggregate Pass@1 can rise while its pass rate falls in <i>every</i> reasoning-depth bin — a Simpson's-paradox collapse hidden by the headline number. I derived a variance-update identity that explains the mode-seeking behavior, then built STAGE-GRPO, a stratified-advantage variant that removes the per-bin degradation (MATH-500 Pass@1 0.826&#8202;→&#8202;0.868). A per-token follow-up is in ablations now. <span class="l"><a href="https://github.com/shawnzhg/grpo-underthinking">code</a> <a href="https://github.com/shawnzhg/grpo-underthinking/blob/main/REPORT.md">report</a></span></p>
+  <p class="rp"><b>How a model is taught to reason in latent space.</b> Writing every reasoning step as a token is expensive (each one grows the KV-cache) and latent reasoning promises to keep the thinking and drop the tokens. What I found at 1.5B is that <i>how</i> the model is taught to enter latent space decides whether RL can improve it afterwards. A redundancy signal that separates filler steps well offline (AUC&nbsp;≈&nbsp;0.72) was nearly useless as an RL reward: the policy learned to skip 0.1% of steps. And once a step leaves token space, the discrete bottleneck that corrects small errors is gone, a single latent step dropped accuracy from 64.5% to 55%. <span class="l"><a href="https://github.com/shawnzhg/adaptive-latent-reasoning">code</a> <a href="https://github.com/shawnzhg/adaptive-latent-reasoning/blob/main/REPORT.md">report</a></span></p>
+  <p class="rp"><b>Spatiotemporal drought forecasting.</b> At the Chinese Academy of Agricultural Sciences, I built a Transformer that fuses gridded spatial features with time series through cross-attention, crossing the query of one stream into the other. On 12 years of ERA5-Land data at 0.1° resolution it reached 98.6% drought-classification accuracy and outperformed LSTM baselines by capturing long-range dependencies in SPI/SPEI indices. I paired it with a drought–water–wheat knowledge graph behind an LLM, so that its recommendations cite evidence instead of hallucinating it.</p>
 
   <h2>Experience</h2>
-
-  <div class="exp"><span class="when">2026 – present</span><b>University of Michigan, Liu Lab</b> — research assistant<br><span class="sub">LLM post-training and latent reasoning, with Prof. Jie Liu</span></div>
-  <div class="exp"><span class="when">2025 – 2026</span><b>Institute of Automation, Chinese Academy of Sciences</b> — research assistant<br><span class="sub">Efficient reasoning of RL-trained LLMs</span></div>
-  <div class="exp"><span class="when">2025</span><b>Chinese Academy of Agricultural Sciences</b> — research assistant<br><span class="sub">Spatiotemporal drought forecasting (cross-attention Transformer; 98.6% classification accuracy on 12 years of ERA5-Land)</span></div>
-  <div class="exp"><span class="when">2024</span><b>Baidu, Speech Technology Department</b> — machine learning intern<br><span class="sub">Data pipelines and encoder customization for large-model TTS; dialect-robust audio–text alignment on a Slurm cluster</span></div>
+  <div class="exp"><span><b>University of Michigan, Liu Lab</b> — research assistant</span><span class="when">2026 – present</span><span class="sub">LLM post-training and latent reasoning, with Prof. Jie Liu</span></div>
+  <div class="exp"><span><b>Institute of Automation, Chinese Academy of Sciences</b> — research assistant</span><span class="when">2025 – 2026</span><span class="sub">Efficient reasoning of RL-trained LLMs</span></div>
+  <div class="exp"><span><b>Chinese Academy of Agricultural Sciences</b> — research assistant</span><span class="when">2025</span><span class="sub">Spatiotemporal drought forecasting with a cross-attention Transformer</span></div>
+  <div class="exp"><span><b>Baidu, Speech Technology Department</b> — machine learning intern</span><span class="when">2024</span><span class="sub">Data pipelines and encoder customization for large-model TTS</span></div>
 
   <footer>Last updated September 2026.</footer>
-
 </div>
 </body>
 </html>
