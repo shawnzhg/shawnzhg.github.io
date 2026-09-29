@@ -5,12 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xiang (Shawn) Zhang</title>
 <meta name="description" content="Xiang (Shawn) Zhang — M.S. student at the University of Michigan working on representation learning, post-training, and agents for large language models. Applying to PhD programs for Fall 2027.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shawnzhg.github.io/">
+<meta property="og:title" content="Xiang (Shawn) Zhang">
+<meta property="og:description" content="M.S. student at the University of Michigan working on representation learning, post-training, and agents for large language models.">
+<meta property="og:image" content="https://shawnzhg.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16181c" media="(prefers-color-scheme: dark)">
+<script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#1d1d1f;--muted:#5f6368;--faint:#8a8f98;--rule:#e6e6e6;--accent:#00274c;--link:#1a5fb4;--maize:#ffcb05}
-  body{margin:0;background:#fff;color:var(--ink);font-family:"Source Sans 3",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6}
-  .page{max-width:860px;margin:0 auto;padding:56px 24px 64px}
+  :root{--bg:#fff;--ink:#1d1d1f;--body2:#333;--muted:#5f6368;--faint:#8a8f98;--rule:#e6e6e6;--accent:#00274c;--link:#1a5fb4;--maize:#ffcb05;--callout:#fafaf7;--hl:#f4f7fb;--navbg:rgba(255,255,255,.86);--thumbfx:none;color-scheme:light}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16181c;--ink:#e4e6ea;--body2:#c9ccd1;--muted:#a3a8b0;--faint:#7f858e;--rule:#2c3037;--accent:#a9c8f5;--link:#7eb0ff;--callout:#1e1f1b;--hl:#1c2230;--navbg:rgba(22,24,28,.86);--thumbfx:brightness(.9);color-scheme:dark}}
+  :root[data-theme="dark"]{--bg:#16181c;--ink:#e4e6ea;--body2:#c9ccd1;--muted:#a3a8b0;--faint:#7f858e;--rule:#2c3037;--accent:#a9c8f5;--link:#7eb0ff;--callout:#1e1f1b;--hl:#1c2230;--navbg:rgba(22,24,28,.86);--thumbfx:brightness(.9);color-scheme:dark}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;line-height:1.6}
+  .page{max-width:860px;margin:0 auto;padding:40px 24px 64px}
   a{color:var(--link);text-decoration:none}
   a:hover{text-decoration:underline}
   p{margin:0 0 12px}
@@ -24,21 +41,19 @@
   .links a:hover{color:var(--link);text-decoration:none}
   .links svg{width:16px;height:16px;fill:currentColor;opacity:.75}
 
-  h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.3rem;margin:44px 0 16px;color:var(--accent)}
-  .applying{margin:18px 0 0;padding:10px 14px;border-left:3px solid var(--maize);background:#fafaf7;font-size:.98rem}
+  h2{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.3rem;margin:44px 0 16px;color:var(--accent);scroll-margin-top:72px}
+  .applying{margin:18px 0 0;padding:10px 14px;border-left:3px solid var(--maize);background:var(--callout);font-size:.98rem}
 
   .news{list-style:none;padding:0;margin:0}
   .news li{display:grid;grid-template-columns:84px 1fr;gap:12px;margin:0 0 6px}
   .news .d{color:var(--faint);font-variant-numeric:tabular-nums;font-size:.95rem;padding-top:1px}
 
-  .pub{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:18px 0;border-top:1px solid var(--rule)}
-  .pub.notb{padding:12px 0}
-  .pub:first-of-type{border-top:0;padding-top:4px}
-  .thumb{width:200px;height:120px;border:1px solid var(--rule);border-radius:4px;background:#fff center/contain no-repeat;overflow:hidden}
-  .thumb img{width:100%;height:100%;object-fit:contain}
-  .thumb.ph{display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:.85rem;background:#f6f7f8}
+  .pub{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:16px 16px;margin:0 -16px 6px;border-radius:8px}
+  .pub.core{background:var(--hl)}
+  .thumb{width:200px;height:120px;border:1px solid var(--rule);border-radius:4px;background:#fff;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:contain;filter:var(--thumbfx)}
   .pub .t{font-weight:700;line-height:1.35;display:block;margin-bottom:3px}
-  .pub .a{display:block;color:#333;font-size:.97rem}
+  .pub .a{display:block;color:var(--body2);font-size:.97rem}
   .pub .v{display:block;margin-top:3px;font-size:.95rem}
   .venue{font-weight:600;color:var(--accent)}
   .status{color:var(--muted);font-style:italic}
@@ -58,6 +73,22 @@
   .exp .when{color:var(--faint);font-variant-numeric:tabular-nums;font-size:.95rem}
   .exp .sub{grid-column:1/-1;color:var(--muted);font-size:.95rem}
 
+  .topnav{position:sticky;top:0;z-index:10;background:var(--navbg);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--rule)}
+  .navin{max-width:860px;margin:0 auto;padding:0 24px;height:54px;display:flex;align-items:center;gap:20px}
+  .brand{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:1.08rem;color:var(--ink);margin-right:auto;white-space:nowrap}
+  .brand:hover{text-decoration:none}
+  .navlinks{display:flex;align-items:center;gap:20px;font-size:.96rem}
+  .navlinks a{color:var(--muted);white-space:nowrap;padding:15px 0;border-bottom:2px solid transparent}
+  .navlinks a:hover{color:var(--ink);text-decoration:none}
+  .navlinks a.on{color:var(--ink);border-bottom-color:var(--maize)}
+  .theme{background:none;border:1px solid var(--rule);border-radius:6px;width:32px;height:32px;display:grid;place-items:center;cursor:pointer;color:var(--muted);padding:0}
+  .theme:hover{color:var(--ink)}
+  .theme svg{width:16px;height:16px;fill:currentColor}
+  .theme .sun{display:none}
+  :root[data-theme="dark"] .theme .sun{display:block}
+  :root[data-theme="dark"] .theme .moon{display:none}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .theme .sun{display:block}:root:not([data-theme="light"]) .theme .moon{display:none}}
+
   footer{margin-top:52px;padding-top:14px;border-top:1px solid var(--rule);color:var(--faint);font-size:.85rem}
 
   @media(max-width:640px){
@@ -65,12 +96,32 @@
     header img{width:130px;height:130px}
     .pub{grid-template-columns:1fr;gap:12px}
     .thumb{width:100%;height:160px}
-    .pub.notb>div:first-child{display:none}
     .news li{grid-template-columns:1fr;gap:0}
+    .brand{display:none}
+    .navin{padding:0 16px;gap:12px}
+    .navlinks{gap:16px;font-size:.93rem;overflow-x:auto;scrollbar-width:none;flex:1}
+    .page{padding:28px 16px 56px}
+    .pub{margin:0 -12px 6px;padding:14px 12px}
   }
 </style>
 </head>
 <body>
+<nav class="topnav">
+  <div class="navin">
+    <a class="brand" href="#">Xiang (Shawn) Zhang</a>
+    <div class="navlinks">
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="Xiang_Zhang_CV.pdf">CV</a>
+    </div>
+    <button class="theme" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="moon" viewBox="0 0 24 24"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5h0v3h0zM11 2h2v3h-2zm0 17h2v3h-2zM2 11h3v2H2zm17 0h3v2h-3zM4.2 5.6l1.4-1.4 2.1 2.1-1.4 1.4zm12.1 12.1 1.4-1.4 2.1 2.1-1.4 1.4zM4.2 18.4l2.1-2.1 1.4 1.4-2.1 2.1zM16.3 6.3l2.1-2.1 1.4 1.4-2.1 2.1z"/></svg>
+    </button>
+  </div>
+</nav>
 <div class="page">
 
   <header>
@@ -91,7 +142,7 @@
   <p style="margin-top:22px">I'm broadly interested in machine learning for language models — how they learn, reason, and act, and how we can tell when they have actually improved. Recently this has meant packaging task expertise as something a frozen model can load on demand (<a href="https://arxiv.org/abs/2608.05475">KV-Skill</a>), rethinking how agents are evaluated and trained so that leaderboard gains reflect real capability (<a href="https://arxiv.org/abs/2609.32318">What Can a Leaderboard Certify?</a>), and studying credit assignment in RL for reasoning models. I'm also interested in applying these methods to scientific problems, where reliability matters more than benchmark scores.</p>
   <div class="applying">I am applying to PhD programs for Fall 2027.</div>
 
-  <h2>News</h2>
+  <h2 id="news">News</h2>
   <ul class="news">
     <li><span class="d">Sep 2026</span><span>New preprint: <a href="https://arxiv.org/abs/2609.32318"><i>What Can a Leaderboard Certify?</i></a> (co-first author), on compositional controllability for evaluating and training biomedical literature-review agents.</span></li>
     <li><span class="d">Aug 2026</span><span>New preprint: <a href="https://arxiv.org/abs/2608.05475">KV-Skill</a> (co-first author), under review at ACL Rolling Review.</span></li>
@@ -99,9 +150,9 @@
     <li><span class="d">Aug 2025</span><span>Began my M.S. at the University of Michigan.</span></li>
   </ul>
 
-  <h2>Publications &amp; Preprints</h2>
+  <h2 id="publications">Publications &amp; Preprints</h2>
 
-  <div class="pub">
+  <div class="pub core">
     <div class="thumb"><img src="img/kvskill.png" alt=""></div>
     <div>
       <span class="t">KV-Skill: Forging Expertise in the Model's Native Language</span>
@@ -112,7 +163,7 @@
     </div>
   </div>
 
-  <div class="pub">
+  <div class="pub core">
     <div class="thumb"><img src="img/scribe.png" alt=""></div>
     <div>
       <span class="t">What Can a Leaderboard Certify? Compositional Controllability for Fair Evaluation and Training of Biomedical Literature-Review Agents</span>
@@ -141,14 +192,14 @@
     </div>
   </div>
 
-  <h2>Research</h2>
+  <h2 id="research">Research</h2>
   <p class="rp"><b>External task knowledge (KV-Skill).</b> The paper above, but it started as a simpler engineering question: we kept re-sending the same long "how to do this task" prompt to a frozen model and paying for it every call. Compressing that knowledge into KV-cache states, then asking what those states really are, led to the operator view — and to the surprise that a text-derived operator survives truncation to a single task-aligned direction per injection layer.</p>
   <p class="rp"><b>GLKB, a knowledge platform for the biomedical literature.</b> <a href="https://glkb.org">GLKB</a> is the Liu Lab's platform for searching and synthesizing biomedical research, and I now handle most of its technical development. Its review-writing agent, SCRIBE, is the system we train and evaluate in <i>What Can a Leaderboard Certify?</i>. Before SCRIBE, I built a training-free deep-research agent for GLKB in which every claim has to pass a mechanical faithfulness check before it can be written, which raised fact-level completeness from 0.442 to 0.645 at 55% lower cost with zero fabricated citations. <span class="l"><a href="https://glkb.org">site</a></span></p>
   <p class="rp"><b>Credit assignment in GRPO.</b> At CASIA I noticed that a model's aggregate Pass@1 can rise while its pass rate falls in <i>every</i> reasoning-depth bin — a Simpson's-paradox collapse hidden by the headline number. I derived a variance-update identity that explains the mode-seeking behavior, then built STAGE-GRPO, a stratified-advantage variant that removes the per-bin degradation (MATH-500 Pass@1 0.826&#8202;→&#8202;0.868). A per-token follow-up is in ablations now. <span class="l"><a href="https://github.com/shawnzhg/grpo-underthinking">code</a> <a href="https://github.com/shawnzhg/grpo-underthinking/blob/main/REPORT.md">report</a></span></p>
   <p class="rp"><b>How a model is taught to reason in latent space.</b> Writing every reasoning step as a token is expensive (each one grows the KV-cache) and latent reasoning promises to keep the thinking and drop the tokens. What I found at 1.5B is that <i>how</i> the model is taught to enter latent space decides whether RL can improve it afterwards. A redundancy signal that separates filler steps well offline (AUC&nbsp;≈&nbsp;0.72) was nearly useless as an RL reward: the policy learned to skip 0.1% of steps. And once a step leaves token space, the discrete bottleneck that corrects small errors is gone, a single latent step dropped accuracy from 64.5% to 55%. <span class="l"><a href="https://github.com/shawnzhg/adaptive-latent-reasoning">code</a> <a href="https://github.com/shawnzhg/adaptive-latent-reasoning/blob/main/REPORT.md">report</a></span></p>
   <p class="rp"><b>Spatiotemporal drought forecasting.</b> At the Chinese Academy of Agricultural Sciences, I built a Transformer that fuses gridded spatial features with time series through cross-attention, crossing the query of one stream into the other. On 12 years of ERA5-Land data at 0.1° resolution it reached 98.6% drought-classification accuracy and outperformed LSTM baselines by capturing long-range dependencies in SPI/SPEI indices. I paired it with a drought–water–wheat knowledge graph behind an LLM, so that its recommendations cite evidence instead of hallucinating it.</p>
 
-  <h2>Experience</h2>
+  <h2 id="experience">Experience</h2>
   <div class="exp"><span><b>University of Michigan, Liu Lab</b> — research assistant</span><span class="when">2026 – present</span><span class="sub">LLM post-training and latent reasoning, with Prof. Jie Liu</span></div>
   <div class="exp"><span><b>Institute of Automation, Chinese Academy of Sciences</b> — research assistant</span><span class="when">2025 – 2026</span><span class="sub">Efficient reasoning of RL-trained LLMs</span></div>
   <div class="exp"><span><b>Chinese Academy of Agricultural Sciences</b> — research assistant</span><span class="when">2025</span><span class="sub">Spatiotemporal drought forecasting with a cross-attention Transformer</span></div>
@@ -156,5 +207,25 @@
 
   <footer>Last updated September 2026.</footer>
 </div>
+<script>
+(function(){
+  var root=document.documentElement;
+  document.querySelector(".theme").addEventListener("click",function(){
+    var dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme=dark?"light":"dark";
+    try{localStorage.setItem("theme",root.dataset.theme)}catch(e){}
+  });
+  var links={};
+  document.querySelectorAll('.navlinks a[href^="#"]').forEach(function(a){links[a.getAttribute("href").slice(1)]=a});
+  var heads=Object.keys(links).map(function(id){return document.getElementById(id)});
+  function mark(){
+    var cur=null;
+    heads.forEach(function(h){if(h.getBoundingClientRect().top<120)cur=h.id});
+    if(innerHeight+scrollY>=document.body.scrollHeight-4)cur=heads[heads.length-1].id;
+    for(var id in links)links[id].classList.toggle("on",id===cur);
+  }
+  addEventListener("scroll",mark,{passive:true});mark();
+})();
+</script>
 </body>
 </html>
